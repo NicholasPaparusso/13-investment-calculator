@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './UI/Header'
+import InvForm from './Inv/InvForm';
+import InvTable from './Inv/InvTable';
 
 function App() {
+
+  const [calculateInv, setCalculateInv] = useState('')
+
+  const getDataInput = (data) => {
+    setCalculateInv(data);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+
+      <InvForm getData={getDataInput}/>
+
+      {/* Todo: Show below table conditionally (only once result data is available) */}
+      {/* Show fallback text if no data is available */}
+      <InvTable  data={calculateInv} />
     </div>
   );
 }

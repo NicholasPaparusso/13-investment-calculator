@@ -1,0 +1,28 @@
+.button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background: linear-gradient(180deg, #1f584b, #17493d);
+    color: #c2e9e0;
+    font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+  }
+  
+  .buttonAlt {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    border: none;
+    background: #222a27;
+    color: #c2e9e0;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: linear-gradient(180deg, #1b5346, #113c32);
+  }
+  
+  .buttonAlt:hover {
+    background: #2f3935;
+    color: #91e1d0;
+  }
